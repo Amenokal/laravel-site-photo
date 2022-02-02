@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400&display=swap);
+:root {
+  --black: #272727;
+  --darkgray: rgb(61, 61, 61);
+  --lightgray: rgb(185, 185, 185);
+  --white: rgb(230, 230, 230);
+  --dropHeight: 0em;
+  --carouselHeight: 0%;
+}
+
+* {
+  margin: 0;
+  color: var(--black);
+  font-family: "Yantramanav", sans-serif;
+  scrollbar-width: none;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+}
+
+body {
+  height: 100%;
+}
+
+.btn {
+  padding: 0.5em;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  background-color: transparent;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.input {
+  padding: 0.3em;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--black);
+  background-color: transparent;
+}
+.input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17%;
+}
+form div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden-labbel {
+  display: none;
+}
+
+.input {
+  width: 100%;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.btn {
+  margin: 1em 0;
+}

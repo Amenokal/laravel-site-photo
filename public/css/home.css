@@ -1,0 +1,456 @@
+@import url(https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400&display=swap);
+:root {
+  --black: #272727;
+  --darkgray: rgb(61, 61, 61);
+  --lightgray: rgb(185, 185, 185);
+  --white: rgb(230, 230, 230);
+  --dropHeight: 0em;
+  --carouselHeight: 0%;
+}
+
+* {
+  margin: 0;
+  color: var(--black);
+  font-family: "Yantramanav", sans-serif;
+  scrollbar-width: none;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+}
+
+body {
+  height: 100%;
+}
+
+.btn {
+  padding: 0.5em;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  background-color: transparent;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.input {
+  padding: 0.3em;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--black);
+  background-color: transparent;
+}
+.input:focus {
+  outline: none;
+}
+
+.galery {
+  height: 100%;
+  width: 100%;
+}
+
+.galery-content {
+  width: 100%;
+  -moz-columns: 3;
+       columns: 3;
+  -moz-column-gap: 0.3em;
+       column-gap: 0.3em;
+  box-sizing: border-box;
+  padding: 0.3em;
+  position: relative;
+}
+.galery-content .img-container {
+  width: 100%;
+  position: relative;
+}
+.galery-content .img-container:hover {
+  cursor: pointer;
+}
+.galery-content .img-container img {
+  width: 100%;
+  height: auto;
+}
+.galery-content .img-container .highlighted {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  color: #e9d20a;
+}
+
+.admin-galery-options {
+  width: 100%;
+  height: 3em;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--black);
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-galery-options .admin-btn-options {
+  display: flex;
+}
+.admin-galery-options .admin-btn-options .btn {
+  display: none;
+  margin-left: 0.5em;
+}
+.admin-galery-options .admin-btn-options .btn.show {
+  display: block;
+}
+.admin-galery-options .hidden-form {
+  display: none;
+}
+
+.admin-photo-options {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(26, 26, 26, 0.7);
+  opacity: 0;
+  transition: 0.2s ease;
+}
+.admin-photo-options:hover {
+  opacity: 1;
+}
+.admin-photo-options i {
+  font-size: 2rem;
+  color: var(--white);
+  margin: 0.5em;
+  transition: 0.1s ease-out;
+}
+.admin-photo-options i:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.admin-photo-options i.fa-times {
+  font-size: 2.5rem;
+}
+
+body {
+  display: flex;
+}
+
+main {
+  width: 85vw;
+  height: 100vh;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  width: 15vw;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.menu h1 {
+  width: 250px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 0.5em;
+}
+.menu h1:hover {
+  cursor: pointer;
+}
+.menu h2 {
+  font-size: 1.4rem;
+}
+.menu h2:hover {
+  cursor: pointer;
+}
+.menu h3 {
+  font-size: 1.2rem;
+}
+.menu h3:hover {
+  cursor: pointer;
+}
+.menu .category-container,
+.menu .galery-container,
+.menu .contact-container {
+  list-style: none;
+  padding-left: 1.5em;
+  justify-self: flex-start;
+}
+.menu .category-container,
+.menu .contact-container {
+  padding-top: 1em;
+}
+.menu .galery-container,
+.menu .contact-content {
+  height: 0px;
+  overflow: hidden;
+  padding-left: 0em;
+  transition: 0.3s ease-out;
+  border-left: 2px solid transparent;
+}
+.menu .galery-container.show,
+.menu .contact-content.show {
+  -webkit-animation: "menuAnimation" 0.3s ease-out forwards;
+          animation: "menuAnimation" 0.3s ease-out forwards;
+}
+.menu .galery-container .galery-wrapper,
+.menu .contact-content .galery-wrapper {
+  transition: 0.1s ease-out;
+}
+.menu .galery-container .galery-wrapper:hover,
+.menu .contact-content .galery-wrapper:hover {
+  transform: scale(1.2) translateX(10%);
+  cursor: pointer;
+}
+
+@-webkit-keyframes menuAnimation {
+  from {
+    padding-left: 0em;
+    border-left: 2px solid transparent;
+  }
+  50% {
+    padding-left: 0em;
+    border-left: 2px solid transparent;
+  }
+  to {
+    padding-left: 0.5em;
+    border-left: 2px solid var(--black);
+  }
+}
+
+@keyframes menuAnimation {
+  from {
+    padding-left: 0em;
+    border-left: 2px solid transparent;
+  }
+  50% {
+    padding-left: 0em;
+    border-left: 2px solid transparent;
+  }
+  to {
+    padding-left: 0.5em;
+    border-left: 2px solid var(--black);
+  }
+}
+.home-img {
+  display: flex;
+  justify-content: center;
+}
+.home-img.vertical {
+  height: 100%;
+  width: auto;
+}
+.home-img.horizontal {
+  width: 100%;
+  height: auto;
+}
+.home-img img {
+  height: inherit;
+  width: inherit;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel i {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-out;
+}
+.carousel i:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.carousel .fa-chevron-left {
+  width: 5%;
+  left: 0;
+  top: 48%;
+  font-size: 1.5rem;
+}
+.carousel .fa-chevron-right {
+  width: 5%;
+  right: 0;
+  top: 48%;
+  font-size: 1.5rem;
+}
+.carousel .fa-times {
+  height: 5%;
+  width: 5%;
+  top: 2%;
+  right: 0;
+  font-size: 1.5rem;
+}
+.carousel .flicker {
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.carousel .flicker figure {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.carousel .flicker figure:not(.currentImg, .next-image-inc, .prev-image-inc) {
+  left: -200%;
+}
+.carousel .flicker figure .horizontal {
+  height: auto;
+  width: 100%;
+}
+.carousel .flicker figure .vertical {
+  width: auto;
+  height: 100%;
+}
+.carousel .flicker .current-to-left {
+  -webkit-animation: "currentToLeft" 0.5s ease-out forwards;
+          animation: "currentToLeft" 0.5s ease-out forwards;
+}
+.carousel .flicker .current-to-right {
+  -webkit-animation: "currentToRight" 0.5s ease-out forwards;
+          animation: "currentToRight" 0.5s ease-out forwards;
+}
+.carousel .flicker .next-image-inc {
+  -webkit-animation: "nextImageInc" 0.5s ease-out forwards;
+          animation: "nextImageInc" 0.5s ease-out forwards;
+  left: 0;
+}
+.carousel .flicker .prev-image-inc {
+  -webkit-animation: "prevImageInc" 0.5s ease-out forwards;
+          animation: "prevImageInc" 0.5s ease-out forwards;
+  left: 0;
+}
+
+@-webkit-keyframes currentToLeft {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+
+@keyframes currentToLeft {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes nextImageInc {
+  from {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(5.5%);
+    opacity: 1;
+  }
+}
+@keyframes nextImageInc {
+  from {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(5.5%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes currentToRight {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+@keyframes currentToRight {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes prevImageInc {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(5.5%);
+    opacity: 1;
+  }
+}
+@keyframes prevImageInc {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(5.5%);
+    opacity: 1;
+  }
+}

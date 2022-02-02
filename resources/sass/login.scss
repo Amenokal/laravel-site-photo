@@ -1,0 +1,30 @@
+@import '__meta.scss';
+
+body {
+    @include flex-col;
+    height: 100vh;
+
+}
+form {
+    @include flex-col;
+    width: 17%;
+
+    div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.hidden-labbel {
+    display: none;
+}
+
+.input{
+    width: 100%;
+    margin: 1em 0;
+    text-align: center;
+}
+.btn {
+    margin: 1em 0;
+}

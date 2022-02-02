@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        DB::table('galeries')->insert([
+            [
+                'name' => 'test',
+                'order' => 1,
+                'category_id' => 7,
+            ],
+            [
+                'name' => 'test2',
+                'order' => 2,
+                'category_id' => 8,
+            ]
+        ]);
     }
 }
