@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Exception;
+use Throwable;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Exceptions\IncorrectMailException;
+use App\Exceptions\IncorrectPasswordException;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -18,8 +23,9 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        // dd(Hash::make('test'));
-        return view('login');
+        return view('login', [
+            'error' => false
+        ]);
     }
 
     /**
@@ -30,11 +36,33 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->authenticate();
+        try{
+            $admin = User::where(['email' => $request->email])->first();
+            if(!$admin)
+            {
+                throw new IncorrectMailException();
+            }
+            else if(!Hash::check($request->password, $admin->makeVisible('password')->password))
+            {
+                throw new IncorrectPasswordException();
+            }
+            else
+            {
+                $request->authenticate();
+                $request->session()->regenerate();
+                return redirect()->intended(RouteServiceProvider::ADMIN);
+            }
+        }
+        catch(IncorrectMailException $e)
+        {
+            return response(view('login', ['error' => $e]), 401);
+        }
+        catch(IncorrectPasswordException $e)
+        {
+            return response(view('login', ['error' => $e]), 401);
+        }
 
-        $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::ADMIN);
     }
 
     /**

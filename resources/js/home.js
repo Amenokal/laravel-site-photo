@@ -3,13 +3,15 @@ require('./bootstrap');
 
 document.onload = setHomeImg();
 function setHomeImg(){
-    let img = new Image;
-    img.src = document.querySelector('.home-img>img').src;
-    img.onload = ()=>{
-        if(img.width > img.height){
-            document.querySelector('.home-img').classList.add('horizontal');
-        }else{
-            document.querySelector('.home-img').classList.add('vertical');
+    if(document.querySelector('.home-img')){
+        let img = new Image;
+        img.src = document.querySelector('.home-img>img').src;
+        img.onload = ()=>{
+            if(img.width > img.height){
+                document.querySelector('.home-img').classList.add('horizontal');
+            }else{
+                document.querySelector('.home-img').classList.add('vertical');
+            }
         }
     }
 };

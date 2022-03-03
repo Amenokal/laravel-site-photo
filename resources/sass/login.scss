@@ -7,7 +7,7 @@ body {
 }
 form {
     @include flex-col;
-    width: 17%;
+    width: 300px;
 
     div{
         width: 100%;
@@ -21,7 +21,7 @@ form {
 }
 
 .input{
-    width: 100%;
+    width: 70%;
     margin: 1em 0;
     text-align: center;
 }

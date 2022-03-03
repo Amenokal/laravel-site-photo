@@ -55,7 +55,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 17%;
+  width: 300px;
 }
 form div {
   width: 100%;
@@ -68,7 +68,7 @@ form div {
 }
 
 .input {
-  width: 100%;
+  width: 70%;
   margin: 1em 0;
   text-align: center;
 }

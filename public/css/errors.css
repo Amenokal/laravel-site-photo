@@ -48,22 +48,33 @@ body {
   flex-direction: column;
 }
 .error-message h1 {
-  font-size: 4rem;
-  margin-top: 1rem;
+  font-size: 6em;
   height: 1em;
+  line-height: 80%;
 }
 .error-message p {
   margin-bottom: 1em;
 }
 .error-message p,
 .error-message a {
-  font-size: 1.5rem;
+  font-size: 1.2em;
   text-decoration: none;
 }
 .error-message a:visited {
   color: var(--black);
 }
-.error-message i {
+.error-message span {
+  display: flex;
+  align-items: center;
+}
+.error-message span:hover {
+  cursor: pointer;
+}
+.error-message span:hover i {
+  transform: translateX(-0.2em) scale(1.5);
+}
+.error-message span i {
   font-size: 0.8em;
   margin-right: 0.3em;
+  transition: 0.2s ease-out;
 }

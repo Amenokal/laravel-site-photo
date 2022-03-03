@@ -2099,16 +2099,18 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 document.onload = setHomeImg();
 
 function setHomeImg() {
-  var img = new Image();
-  img.src = document.querySelector('.home-img>img').src;
+  if (document.querySelector('.home-img')) {
+    var img = new Image();
+    img.src = document.querySelector('.home-img>img').src;
 
-  img.onload = function () {
-    if (img.width > img.height) {
-      document.querySelector('.home-img').classList.add('horizontal');
-    } else {
-      document.querySelector('.home-img').classList.add('vertical');
-    }
-  };
+    img.onload = function () {
+      if (img.width > img.height) {
+        document.querySelector('.home-img').classList.add('horizontal');
+      } else {
+        document.querySelector('.home-img').classList.add('vertical');
+      }
+    };
+  }
 }
 
 ;

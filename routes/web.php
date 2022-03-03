@@ -20,7 +20,6 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 Route::get('/', [WebController::class, 'home'])->name('home');
 
-Route::get('/galery/show/{galeryName}', [GaleryController::class, 'show']);
 Route::get('/galery/get/{categoryOrder}/{galeryOrder}', [WebController::class, 'getContent']);
 Route::get('/carousel/open/{galeryOrder}/{photoOrder}', [WebController::class, 'openCarousel']);
 

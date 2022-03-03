@@ -6,9 +6,9 @@
     flex-direction: column;
 
     h1{
-        font-size: 4rem;
-        margin-top: 1rem;
+        font-size: 6em;
         height: 1em;
+        line-height: 80%;
     }
 
     p {
@@ -17,16 +17,30 @@
 
     p,
     a {
-        font-size: 1.5rem;
+        font-size: 1.2em;
         text-decoration: none;
     }
-
     a:visited{
         color: var(--black);
     }
 
-    i{
-        font-size: .8em;
-        margin-right: .3em;
+
+    span {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            i{
+                transform: translateX(-.2em) scale(1.5);
+            }
+
+            cursor: pointer;
+        }
+
+        i{
+            font-size: .8em;
+            margin-right: .3em;
+            transition: .2s ease-out;
+        }
     }
 }

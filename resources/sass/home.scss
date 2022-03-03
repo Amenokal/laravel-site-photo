@@ -2,6 +2,9 @@
 @import 'galery.scss';
 
 
+
+// --------------------------- GENERAL ------------------------- //
+
 body {
     display: flex;
 }
@@ -15,8 +18,13 @@ main {
     align-items: flex-start;
 }
 
+
+
+// --------------------------- MENU ------------------------- //
+
 .menu {
     @include flex-col;
+    align-items: unset;
     min-width: 250px;
     width: 15vw;
     height: 100%;
@@ -99,6 +107,7 @@ main {
 
 
 
+// --------------------------- HOME IMAGE GALLERY ------------------------- //
 
 
 .home-img {
@@ -120,8 +129,16 @@ main {
         width: inherit;
     }
 }
+.no-home-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
+// --------------------------- CAROUSEL ------------------------- //
 
 
 .carousel {

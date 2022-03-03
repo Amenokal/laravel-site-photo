@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Photo;
 use App\Models\Galery;
 use App\Models\Category;
+use Illuminate\Support\Facades\Hash;
 
 class WebController extends Controller
 {

@@ -16,6 +16,8 @@
             <input type='file' id='photos' name='photos[]' multiple />
             <button id='uploadFormBtn' type='submit'></button>
         </form>
+    @else
+        <p>Pas de galerie sélectionée</p>
     @endif
 </section>
 

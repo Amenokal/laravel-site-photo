@@ -5,7 +5,7 @@
             <img src="storage/images/{{$homeimg->src}}" >
         </figure>
     @else
-        <p>Pas encore d'image d'acceuil</p>
+        <p class="no-home-img">Pas encore d'image d'acceuil</p>
     @endif
 
 @else

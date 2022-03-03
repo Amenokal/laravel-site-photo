@@ -146,6 +146,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-items: unset;
   min-width: 250px;
   width: 15vw;
   height: 100%;
@@ -254,6 +255,14 @@ main {
 .home-img img {
   height: inherit;
   width: inherit;
+}
+
+.no-home-img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel {
