@@ -138,6 +138,11 @@ main {
   overflow: scroll;
   display: flex;
   justify-content: center;
+}
+main.home-img-display {
+  align-items: center;
+}
+main.galery-display {
   align-items: flex-start;
 }
 
@@ -196,6 +201,30 @@ main {
   transition: 0.3s ease-out;
   border-left: 2px solid transparent;
 }
+.menu .galery-container li,
+.menu .contact-content li {
+  transition: 0.3s;
+}
+.menu .galery-container li > a,
+.menu .contact-content li > a {
+  text-decoration: none;
+}
+.menu .galery-container li:visited,
+.menu .contact-content li:visited {
+  color: var(--black);
+}
+.menu .galery-container > .fa-envelope-square:hover,
+.menu .contact-content > .fa-envelope-square:hover {
+  color: #BB001B;
+}
+.menu .galery-container > .fa-facebook-square:hover,
+.menu .contact-content > .fa-facebook-square:hover {
+  color: #4267B2;
+}
+.menu .galery-container > .fa-instagram-square:hover,
+.menu .contact-content > .fa-instagram-square:hover {
+  color: #c33cbe;
+}
 .menu .galery-container.show,
 .menu .contact-content.show {
   -webkit-animation: "menuAnimation" 0.3s ease-out forwards;
@@ -240,6 +269,14 @@ main {
     border-left: 2px solid var(--black);
   }
 }
+.home-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
 .home-img {
   display: flex;
   justify-content: center;

@@ -1,12 +1,19 @@
+<main @class([
+    'home-img-display' => $home,
+    'galery-display' => !$home,
+])>
+
 @if ($home)
 
-    @if($homeimg)
-        <figure class='home-img'>
-            <img src="storage/images/{{$homeimg->src}}" >
-        </figure>
-    @else
-        <p class="no-home-img">Pas encore d'image d'acceuil</p>
-    @endif
+    <div class='home-img-container'>
+        @if($homeimg)
+            <figure class='home-img'>
+                <img src="storage/images/{{$homeimg->src}}" >
+            </figure>
+        @else
+            <p class="no-home-img">Pas encore d'image d'acceuil</p>
+        @endif
+    </div>
 
 @else
 
@@ -28,3 +35,4 @@
 
 @endif
 
+</main>

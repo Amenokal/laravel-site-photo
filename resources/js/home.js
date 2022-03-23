@@ -46,13 +46,13 @@ function openContact(){
         document.querySelector('ul.show').style.height = "0px";
         document.querySelector('ul.show').classList.remove('show');
         document.querySelector('.contact-content').classList.toggle('show');
-        document.querySelector('.show').style.height = "6em";
+        document.querySelector('.show').style.height = "7.5em";
     }else if(document.querySelector('.contact-content.show')){
         document.querySelector('.contact-content').classList.toggle('show');
         document.querySelector('.show').style.height = "0px";
     }else{
         document.querySelector('.contact-content').classList.toggle('show');
-        document.querySelector('.show').style.height = "6em";
+        document.querySelector('.show').style.height = "7.5em";
     }
 }
 

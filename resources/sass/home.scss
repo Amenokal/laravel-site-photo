@@ -15,7 +15,14 @@ main {
     overflow: scroll;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+
+    &.home-img-display {
+        align-items: center;
+    }
+
+    &.galery-display {
+        align-items: flex-start;
+    }
 }
 
 
@@ -43,12 +50,14 @@ main {
             cursor:pointer;
         }
     }
+
     h2{
         font-size: 1.4rem;
         &:hover{
             cursor: pointer;
         }
     }
+
     h3{
         font-size: 1.2rem;
         &:hover{
@@ -76,6 +85,30 @@ main {
         padding-left: 0em;
         transition: .3s ease-out;
         border-left: 2px solid transparent;
+
+        li {
+
+            transition: .3s;
+
+            &>a{
+                text-decoration: none;
+            }
+
+            &:visited {
+                color: var(--black);
+            }
+
+        }
+
+        &>.fa-envelope-square:hover {
+            color: #BB001B;
+        }
+        &>.fa-facebook-square:hover {
+            color: #4267B2;
+        }
+        &>.fa-instagram-square:hover {
+            color: rgb(195, 60, 190);
+        }
 
         &.show{
             animation: 'menuAnimation' .3s ease-out forwards;
@@ -110,6 +143,14 @@ main {
 // --------------------------- HOME IMAGE GALLERY ------------------------- //
 
 
+.home-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: .5em;
+}
+
 .home-img {
     display: flex;
     justify-content: center;
@@ -129,6 +170,7 @@ main {
         width: inherit;
     }
 }
+
 .no-home-img {
     height: 100%;
     width: 100%;

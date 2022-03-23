@@ -39,7 +39,7 @@ class GaleryController extends Controller
 
     public function edit(Request $request)
     {
-        Galery::where('name', $request->name)->update(['name'=>$request->newName]);
+        Galery::where('name', $request->oldName)->update(['name'=>$request->newName]);
 
         return view('components.admin-navbar',[
             'categories' => Category::orderBy('order')->get(),
