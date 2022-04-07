@@ -33,10 +33,10 @@ function openCategory(e){
         document.querySelector('ul.show').style.height = "0px";
         document.querySelector('ul.show').classList.remove('show');
         galeries.classList.toggle('show');
-        galeries.style.height = `${galNb*1.6}em`;
+        galeries.style.height = `${galNb*1.6}rem`;
     }else{
         galeries.classList.toggle('show');
-        galeries.style.height = `${galNb*1.6}em`;
+        galeries.style.height = `${galNb*1.6}rem`;
     }
 }
 
@@ -46,13 +46,13 @@ function openContact(){
         document.querySelector('ul.show').style.height = "0px";
         document.querySelector('ul.show').classList.remove('show');
         document.querySelector('.contact-content').classList.toggle('show');
-        document.querySelector('.show').style.height = "7.5em";
+        document.querySelector('.show').style.height = "8.8rem";
     }else if(document.querySelector('.contact-content.show')){
         document.querySelector('.contact-content').classList.toggle('show');
         document.querySelector('.show').style.height = "0px";
     }else{
         document.querySelector('.contact-content').classList.toggle('show');
-        document.querySelector('.show').style.height = "7.5em";
+        document.querySelector('.show').style.height = "8.8rem";
     }
 }
 

@@ -1,4 +1,4 @@
-<main @class([
+<div @class([
     'home-img-display' => $home,
     'galery-display' => !$home,
 ])>
@@ -35,4 +35,4 @@
 
 @endif
 
-</main>
+</div>

@@ -239,6 +239,12 @@ main.galery-display {
   transform: scale(1.2) translateX(10%);
   cursor: pointer;
 }
+.menu .contact-content {
+  max-width: 200px;
+}
+.menu .contact-content > li {
+  margin: 0.3em 0;
+}
 
 @-webkit-keyframes menuAnimation {
   from {

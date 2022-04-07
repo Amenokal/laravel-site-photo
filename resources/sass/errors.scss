@@ -1,11 +1,11 @@
-@import '__meta.scss';
+@import "__meta.scss";
 
-.error-message{
+.error-message {
     margin: 2em;
     display: flex;
     flex-direction: column;
 
-    h1{
+    h1 {
         font-size: 6em;
         height: 1em;
         line-height: 80%;
@@ -20,27 +20,26 @@
         font-size: 1.2em;
         text-decoration: none;
     }
-    a:visited{
+    a:visited {
         color: var(--black);
     }
-
 
     span {
         display: flex;
         align-items: center;
 
         &:hover {
-            i{
-                transform: translateX(-.2em) scale(1.5);
-            }
-
             cursor: pointer;
+
+            i {
+                transform: translateX(-0.2em) scale(1.5);
+            }
         }
 
-        i{
-            font-size: .8em;
-            margin-right: .3em;
-            transition: .2s ease-out;
+        i {
+            font-size: 0.8em;
+            margin-right: 0.3em;
+            transition: 0.2s ease-out;
         }
     }
 }

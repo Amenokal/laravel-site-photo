@@ -26,10 +26,10 @@
 
             <ul class='contact-content'>
                 <li class="fas fa-envelope-square">
-                    <a href='bonjour@xavier-cauchy.com'>bonjour@xavier-cauchy.com</a>
+                    <a href='mailto:bonjour@xavier-cauchy.com'>bonjour@xavier-cauchy.com</a>
                 </li>
                 <li class="fab fa-facebook-square">
-                    <a href='https://www.facebook.com/maurice.querient'>Xavier Cauchy Photographie</a>
+                    <a href='https://www.facebook.com/xavier.cauchy.photographie/'>Xavier Cauchy Photographie</a>
                 </li>
                 <li class="fa-brands fa-instagram-square">
                     <a href='https://www.instagram.com/xavier_cauchy/'>xavier_cauchy</a>

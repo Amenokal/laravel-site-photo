@@ -87,7 +87,6 @@ main {
         border-left: 2px solid transparent;
 
         li {
-
             transition: .3s;
 
             &>a{
@@ -120,6 +119,12 @@ main {
                 transform: scale(1.2) translateX(10%);
                 cursor: pointer;
             }
+        }
+    }
+    .contact-content{
+        max-width: 200px;
+        &>li{
+            margin: .3em 0;
         }
     }
 }
